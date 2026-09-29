@@ -1,113 +1,1772 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Special Page 😏</title>
-<style>
-    body {
-        margin: 0;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-        font-family: 'Poppins', sans-serif;
-        overflow: hidden;
-    }
 
-    .card {
-        background: white;
-        padding: 40px;
-        border-radius: 20px;
-        text-align: center;
-        box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-        z-index: 2;
-    }
+    <meta charset="UTF-8">
 
-    h1 {
-        margin-bottom: 20px;
-    }
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    button {
-        padding: 15px 30px;
-        font-size: 18px;
-        border: none;
-        border-radius: 30px;
-        background: #ff4d6d;
-        color: white;
-        cursor: pointer;
-        transition: transform 0.2s;
-    }
+    <title>Happy Birthday Fasiii ❤️</title>
 
-    button:hover {
-        transform: scale(1.1);
-    }
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap"
+        rel="stylesheet"
+    >
 
-    .hidden {
-        display: none;
-    }
+    <style>
 
-    .message {
-        position: absolute;
-        font-size: 50px;
-        font-weight: bold;
-        color: #fff;
-        text-shadow: 3px 3px 10px black;
-        z-index: 2;
-        text-align: center;
-    }
-
-    .emoji {
-        position: absolute;
-        font-size: 30px;
-        animation: float 6s linear infinite;
-    }
-
-    @keyframes float {
-        0% {
-            transform: translateY(100vh);
-            opacity: 1;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        100% {
-            transform: translateY(-10vh);
-            opacity: 0;
+
+        html {
+            scroll-behavior: smooth;
         }
-    }
-</style>
+
+        body {
+            min-height: 100vh;
+            background: #030305;
+            color: white;
+            font-family: "DM Sans", sans-serif;
+            overflow-x: hidden;
+        }
+
+
+        /* ================================
+           COLORS
+        ================================= */
+
+        :root {
+            --red: #e5092f;
+            --red-light: #ff4264;
+            --blue: #145cff;
+            --blue-light: #8faeff;
+        }
+
+
+        /* ================================
+           BACKGROUND
+        ================================= */
+
+        .background {
+            position: fixed;
+            inset: 0;
+            z-index: -20;
+
+            background:
+                radial-gradient(
+                    circle at 50% 35%,
+                    rgba(229, 9, 47, .20),
+                    transparent 30%
+                ),
+
+                radial-gradient(
+                    circle at 15% 80%,
+                    rgba(20, 92, 255, .14),
+                    transparent 32%
+                ),
+
+                radial-gradient(
+                    circle at 90% 10%,
+                    rgba(229, 9, 47, .10),
+                    transparent 25%
+                ),
+
+                linear-gradient(
+                    145deg,
+                    #010103,
+                    #0b0306,
+                    #020204
+                );
+        }
+
+
+        /* ================================
+           GLOW
+        ================================= */
+
+        .red-glow {
+            position: fixed;
+
+            width: 420px;
+            height: 420px;
+
+            left: 50%;
+            top: 35%;
+
+            transform:
+                translate(-50%, -50%);
+
+            border-radius: 50%;
+
+            background:
+                rgba(229, 9, 47, .08);
+
+            filter: blur(90px);
+
+            pointer-events: none;
+
+            z-index: -10;
+
+            animation:
+                glowPulse
+                5s
+                ease-in-out
+                infinite;
+        }
+
+        @keyframes glowPulse {
+
+            0%,
+            100% {
+                opacity: .45;
+
+                transform:
+                    translate(-50%, -50%)
+                    scale(1);
+            }
+
+            50% {
+                opacity: 1;
+
+                transform:
+                    translate(-50%, -50%)
+                    scale(1.2);
+            }
+        }
+
+
+        /* ================================
+           STARS
+        ================================= */
+
+        .stars {
+            position: fixed;
+
+            inset: 0;
+
+            z-index: -8;
+
+            pointer-events: none;
+
+            background-image:
+
+                radial-gradient(
+                    1px 1px at 15% 20%,
+                    rgba(255,255,255,.8),
+                    transparent
+                ),
+
+                radial-gradient(
+                    1px 1px at 70% 25%,
+                    rgba(255,255,255,.7),
+                    transparent
+                ),
+
+                radial-gradient(
+                    1px 1px at 35% 70%,
+                    rgba(255,255,255,.7),
+                    transparent
+                ),
+
+                radial-gradient(
+                    1px 1px at 85% 75%,
+                    rgba(255,255,255,.6),
+                    transparent
+                ),
+
+                radial-gradient(
+                    1px 1px at 10% 90%,
+                    rgba(255,255,255,.5),
+                    transparent
+                );
+
+            background-size:
+                240px 240px,
+                300px 300px,
+                260px 260px,
+                350px 350px,
+                280px 280px;
+
+            opacity: .65;
+        }
+
+
+        /* ================================
+           WEB
+        ================================= */
+
+        .web {
+            position: fixed;
+
+            width: 360px;
+            height: 360px;
+
+            top: -130px;
+            right: -130px;
+
+            border-radius: 50%;
+
+            opacity: .20;
+
+            z-index: -5;
+
+            background:
+                repeating-radial-gradient(
+                    circle,
+                    transparent 0 34px,
+                    rgba(255,255,255,.65) 35px 36px
+                );
+        }
+
+        .web::after {
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                repeating-conic-gradient(
+                    from 0deg,
+                    transparent 0deg 14deg,
+                    rgba(255,255,255,.55) 15deg,
+                    transparent 16deg 30deg
+                );
+        }
+
+
+        .web-left {
+            position: fixed;
+
+            width: 300px;
+            height: 300px;
+
+            left: -130px;
+            bottom: -130px;
+
+            border-radius: 50%;
+
+            opacity: .10;
+
+            z-index: -5;
+
+            background:
+                repeating-radial-gradient(
+                    circle,
+                    transparent 0 28px,
+                    white 29px 30px
+                );
+        }
+
+
+        /* ================================
+           SPIDER
+        ================================= */
+
+        .spider {
+            position: fixed;
+
+            top: 0;
+            left: 50%;
+
+            transform:
+                translateX(-50%);
+
+            z-index: 30;
+
+            font-size: 32px;
+
+            animation:
+                spiderSwing
+                4s
+                ease-in-out
+                infinite;
+        }
+
+        .spider-line {
+            position: absolute;
+
+            width: 1px;
+            height: 85px;
+
+            background:
+                linear-gradient(
+                    white,
+                    transparent
+                );
+
+            left: 50%;
+            bottom: 100%;
+
+            transform:
+                translateX(-50%);
+        }
+
+        @keyframes spiderSwing {
+
+            0%,
+            100% {
+                transform:
+                    translateX(-50%)
+                    rotate(-4deg);
+            }
+
+            50% {
+                transform:
+                    translateX(-50%)
+                    rotate(4deg);
+            }
+        }
+
+
+        /* ================================
+           FIRST PAGE
+        ================================= */
+
+        .hero {
+            min-height: 100svh;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            padding:
+                60px 20px 40px;
+
+            position: relative;
+        }
+
+
+        /* ================================
+           TITLE
+        ================================= */
+
+        .title {
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size:
+                clamp(
+                    58px,
+                    17vw,
+                    130px
+                );
+
+            font-weight: 600;
+
+            line-height: .90;
+
+            letter-spacing: -3px;
+
+            animation:
+                titleAppear
+                1.3s
+                ease
+                both;
+        }
+
+        .title .happy {
+            display: block;
+            color: white;
+        }
+
+        .title .birthday {
+            display: block;
+
+            color:
+                var(--red-light);
+
+            font-style: italic;
+
+            text-shadow:
+                0 0 30px
+                rgba(229,9,47,.35);
+        }
+
+        .title .name {
+            display: block;
+
+            margin-top: 17px;
+
+            font-family:
+                "Montserrat",
+                sans-serif;
+
+            font-size: .25em;
+
+            font-weight: 600;
+
+            letter-spacing: 10px;
+
+            color: white;
+        }
+
+
+        /* ================================
+           HEART
+        ================================= */
+
+        .title-heart {
+            margin-top: 28px;
+
+            font-size: 20px;
+
+            color:
+                var(--red-light);
+
+            animation:
+                heartBeat
+                1.5s
+                ease-in-out
+                infinite;
+        }
+
+
+        /* ================================
+           LETTER BUTTON
+        ================================= */
+
+        .letter-button {
+            margin-top: 30px;
+
+            width: 76px;
+            height: 76px;
+
+            border-radius: 50%;
+
+            border:
+                1px solid
+                rgba(255,255,255,.20);
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(229,9,47,.30),
+                    rgba(20,92,255,.10)
+                );
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            font-size: 32px;
+
+            cursor: pointer;
+
+            user-select: none;
+
+            box-shadow:
+                0 0 30px
+                rgba(229,9,47,.18);
+
+            transition:
+                .3s ease;
+        }
+
+        .letter-button:hover {
+            transform:
+                translateY(-5px)
+                scale(1.05);
+
+            box-shadow:
+                0 10px 40px
+                rgba(229,9,47,.35);
+        }
+
+        .letter-button:active {
+            transform:
+                scale(.93);
+        }
+
+
+        .letter-text {
+            margin-top: 13px;
+
+            font-family:
+                "Montserrat",
+                sans-serif;
+
+            font-size: 9px;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+            color:
+                rgba(255,255,255,.40);
+        }
+
+
+        .bottom-heart {
+            position: absolute;
+
+            bottom: 25px;
+
+            font-size: 13px;
+
+            color:
+                rgba(255,255,255,.25);
+        }
+
+
+        /* ================================
+           LETTER PAGE
+        ================================= */
+
+        .letter-page {
+            display: none;
+
+            min-height: 100vh;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            text-align: center;
+
+            padding:
+                80px 20px 70px;
+        }
+
+        .letter-page.show {
+            display: flex;
+
+            animation:
+                pageReveal
+                .8s
+                ease
+                both;
+        }
+
+
+        .letter-label {
+            font-family:
+                "Montserrat",
+                sans-serif;
+
+            font-size: 9px;
+
+            letter-spacing: 4px;
+
+            text-transform: uppercase;
+
+            color:
+                rgba(255,255,255,.40);
+
+            margin-bottom: 18px;
+        }
+
+
+        .letter-title {
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size:
+                clamp(
+                    45px,
+                    13vw,
+                    85px
+                );
+
+            line-height: 1;
+        }
+
+        .letter-title span {
+            color:
+                var(--red-light);
+
+            font-style: italic;
+        }
+
+
+        /* ================================
+           MESSAGE
+        ================================= */
+
+        .message-card {
+            width:
+                min(
+                    92vw,
+                    470px
+                );
+
+            margin-top: 35px;
+
+            padding:
+                32px 24px;
+
+            border-radius: 24px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255,255,255,.07),
+                    rgba(255,255,255,.025)
+                );
+
+            border:
+                1px solid
+                rgba(255,255,255,.12);
+
+            backdrop-filter:
+                blur(20px);
+
+            box-shadow:
+                0 30px 80px
+                rgba(0,0,0,.50);
+        }
+
+
+        .message-heart {
+            font-size: 34px;
+
+            margin-bottom: 18px;
+
+            animation:
+                heartBeat
+                1.5s
+                infinite;
+        }
+
+
+        .message {
+            font-size: 14px;
+
+            line-height: 2;
+
+            color:
+                rgba(255,255,255,.74);
+
+            text-align: left;
+        }
+
+
+        .highlight {
+            color:
+                var(--red-light);
+
+            font-weight: 600;
+        }
+
+
+        .special {
+            display: block;
+
+            margin-top: 25px;
+
+            padding-top: 22px;
+
+            border-top:
+                1px solid
+                rgba(255,255,255,.10);
+
+            color:
+                var(--blue-light);
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size: 15px;
+
+            line-height: 1.9;
+
+            font-style: italic;
+
+            text-align: center;
+        }
+
+
+        .love-text {
+            margin-top: 25px;
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size: 20px;
+
+            font-style: italic;
+
+            color:
+                rgba(255,255,255,.75);
+        }
+
+        .love-text span {
+            color:
+                var(--red-light);
+        }
+
+
+        /* ================================
+           CERTIFICATE
+        ================================= */
+
+        .certificate-section {
+            width: 100%;
+
+            max-width: 520px;
+
+            margin-top: 65px;
+
+            text-align: center;
+        }
+
+
+        .certificate-label {
+            font-family:
+                "Montserrat",
+                sans-serif;
+
+            font-size: 9px;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+            color:
+                rgba(255,255,255,.35);
+
+            margin-bottom: 18px;
+        }
+
+
+        .certificate {
+            width: 100%;
+
+            padding: 5px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #e5092f,
+                    #145cff,
+                    #e5092f
+                );
+
+            border-radius: 8px;
+
+            box-shadow:
+                0 25px 70px
+                rgba(0,0,0,.55);
+        }
+
+
+        .certificate-border {
+            background: #08080b;
+
+            border:
+                1px solid
+                rgba(255,255,255,.35);
+
+            padding:
+                35px 22px;
+
+            position: relative;
+        }
+
+
+        .certificate-top {
+            font-size: 20px;
+
+            letter-spacing: 8px;
+
+            margin-bottom: 18px;
+        }
+
+
+        .certificate h3 {
+            font-family:
+                "Montserrat",
+                sans-serif;
+
+            font-size: 13px;
+
+            letter-spacing: 5px;
+        }
+
+
+        .certificate h2 {
+            margin-top: 8px;
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size: 28px;
+
+            color:
+                var(--red-light);
+        }
+
+
+        .certificate-line {
+            width: 100px;
+
+            height: 1px;
+
+            background:
+                rgba(255,255,255,.35);
+
+            margin:
+                20px auto;
+        }
+
+
+        .certificate-small {
+            font-size: 12px;
+
+            color:
+                rgba(255,255,255,.55);
+        }
+
+
+        .certificate-name {
+            margin:
+                8px 0 15px;
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size: 38px;
+
+            letter-spacing: 5px;
+        }
+
+
+        .certificate-text {
+            max-width: 390px;
+
+            margin:
+                12px auto;
+
+            font-size: 12px;
+
+            line-height: 1.8;
+
+            color:
+                rgba(255,255,255,.62);
+        }
+
+
+        .certificate-text strong {
+            color:
+                var(--red-light);
+        }
+
+
+        .certificate-details {
+            display: flex;
+
+            justify-content:
+                space-between;
+
+            gap: 20px;
+
+            margin-top: 28px;
+
+            padding-top: 18px;
+
+            border-top:
+                1px solid
+                rgba(255,255,255,.10);
+        }
+
+
+        .certificate-details div {
+            flex: 1;
+        }
+
+
+        .certificate-details span {
+            display: block;
+
+            font-size: 8px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 2px;
+
+            color:
+                rgba(255,255,255,.35);
+
+            margin-bottom: 5px;
+        }
+
+
+        .certificate-details strong {
+            font-size: 10px;
+
+            color:
+                rgba(255,255,255,.75);
+        }
+
+
+        .certificate-sign {
+            margin-top: 30px;
+        }
+
+
+        .signature {
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-style: italic;
+
+            font-size: 17px;
+
+            color:
+                rgba(255,255,255,.8);
+        }
+
+
+        .sign-line {
+            width: 180px;
+
+            height: 1px;
+
+            background:
+                rgba(255,255,255,.25);
+
+            margin:
+                5px auto 6px;
+        }
+
+
+        .certificate-sign small {
+            font-size: 8px;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            color:
+                rgba(255,255,255,.35);
+        }
+
+
+        .certificate-warning {
+            margin-top: 30px;
+
+            padding: 10px;
+
+            border:
+                1px solid
+                rgba(229,9,47,.35);
+
+            background:
+                rgba(229,9,47,.08);
+
+            color:
+                var(--red-light);
+
+            font-family:
+                "Montserrat",
+                sans-serif;
+
+            font-size: 8px;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+        }
+
+
+        /* ================================
+           DOWNLOAD BUTTON
+        ================================= */
+
+        .download-certificate {
+            margin-top: 22px;
+
+            padding:
+                14px 22px;
+
+            border:
+                1px solid
+                rgba(255,255,255,.15);
+
+            border-radius: 50px;
+
+            background:
+                rgba(255,255,255,.06);
+
+            color: white;
+
+            font-family:
+                "Montserrat",
+                sans-serif;
+
+            font-size: 10px;
+
+            letter-spacing: 1px;
+
+            cursor: pointer;
+
+            transition: .3s ease;
+        }
+
+
+        .download-certificate:hover {
+            background:
+                rgba(229,9,47,.18);
+
+            border-color:
+                rgba(229,9,47,.5);
+
+            transform:
+                translateY(-2px);
+        }
+
+
+        /* ================================
+           PARTICLES
+        ================================= */
+
+        .particle {
+            position: fixed;
+
+            bottom: -30px;
+
+            pointer-events: none;
+
+            z-index: 100;
+
+            animation:
+                floatUp
+                linear
+                forwards;
+        }
+
+        @keyframes floatUp {
+
+            0% {
+                transform:
+                    translateY(0)
+                    scale(.7)
+                    rotate(0deg);
+
+                opacity: 0;
+            }
+
+            15% {
+                opacity: 1;
+            }
+
+            100% {
+                transform:
+                    translateY(-110vh)
+                    scale(1.1)
+                    rotate(180deg);
+
+                opacity: 0;
+            }
+        }
+
+
+        /* ================================
+           CONFETTI
+        ================================= */
+
+        .confetti {
+            position: fixed;
+
+            top: -20px;
+
+            width: 5px;
+            height: 12px;
+
+            z-index: 200;
+
+            animation:
+                confettiFall
+                4s
+                linear
+                forwards;
+        }
+
+        @keyframes confettiFall {
+
+            to {
+                transform:
+                    translateY(110vh)
+                    rotate(720deg);
+
+                opacity: 0;
+            }
+        }
+
+
+        /* ================================
+           ANIMATIONS
+        ================================= */
+
+        @keyframes titleAppear {
+
+            from {
+                opacity: 0;
+
+                transform:
+                    scale(.90)
+                    translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+
+                transform:
+                    scale(1)
+                    translateY(0);
+            }
+        }
+
+
+        @keyframes pageReveal {
+
+            from {
+                opacity: 0;
+
+                transform:
+                    translateY(30px)
+                    scale(.96);
+            }
+
+            to {
+                opacity: 1;
+
+                transform:
+                    translateY(0)
+                    scale(1);
+            }
+        }
+
+
+        @keyframes heartBeat {
+
+            0%,
+            100% {
+                transform:
+                    scale(1);
+            }
+
+            50% {
+                transform:
+                    scale(1.2);
+            }
+        }
+
+
+        /* ================================
+           PRINT CERTIFICATE
+        ================================= */
+
+        @media print {
+
+            body * {
+                visibility: hidden;
+            }
+
+            .certificate,
+            .certificate * {
+                visibility: visible;
+            }
+
+            .certificate {
+                position: absolute;
+
+                left: 50%;
+                top: 50%;
+
+                transform:
+                    translate(-50%, -50%);
+
+                width: 90%;
+            }
+
+            .download-certificate {
+                display: none;
+            }
+
+            .certificate-section {
+                margin: 0;
+            }
+
+        }
+
+
+        /* ================================
+           SMALL SCREEN
+        ================================= */
+
+        @media (max-width: 380px) {
+
+            .title {
+                font-size: 50px;
+            }
+
+            .title .name {
+                letter-spacing: 7px;
+            }
+
+            .letter-button {
+                width: 68px;
+                height: 68px;
+
+                font-size: 28px;
+            }
+
+            .message-card {
+                padding:
+                    28px 20px;
+            }
+
+            .certificate-border {
+                padding:
+                    30px 15px;
+            }
+
+            .certificate h2 {
+                font-size: 24px;
+            }
+
+            .certificate-name {
+                font-size: 32px;
+            }
+
+            .certificate-details {
+                flex-direction: column;
+
+                gap: 15px;
+            }
+        }
+
+    </style>
+
 </head>
+
+
 <body>
 
-<div class="card" id="card">
-    <h1>💌 Faaasi mon oru surprise 😌</h1>
-    <button onclick="showFun()">Click panneda </button>
-</div>
 
-<div class="message hidden" id="msg">
-    Poda penn illathavane 😂
-</div>
+    <!-- BACKGROUND -->
 
-<script>
-function showFun() {
-    document.body.style.background =
-        "linear-gradient(135deg, #667eea, #764ba2)";
-    document.getElementById("card").classList.add("hidden");
-    document.getElementById("msg").classList.remove("hidden");
+    <div class="background"></div>
 
-    // Create floating laughing emojis
-    for (let i = 0; i < 30; i++) {
-        let emoji = document.createElement("div");
-        emoji.className = "emoji";
-        emoji.innerText = "😂";
-        emoji.style.left = Math.random() * 100 + "vw";
-        emoji.style.animationDuration = (3 + Math.random() * 5) + "s";
-        document.body.appendChild(emoji);
+    <div class="red-glow"></div>
 
-        setTimeout(() => {
-            emoji.remove();
-        }, 8000);
-    }
-}
-</script>
+    <div class="stars"></div>
+
+    <div class="web"></div>
+
+    <div class="web-left"></div>
+
+
+    <!-- SPIDER -->
+
+    <div class="spider">
+
+        <div class="spider-line"></div>
+
+        🕷️
+
+    </div>
+
+
+    <!-- =====================================================
+         FIRST PAGE
+    ===================================================== -->
+
+    <section
+        class="hero"
+        id="hero"
+    >
+
+        <h1 class="title">
+
+            <span class="happy">
+                Happy
+            </span>
+
+            <span class="birthday">
+                Birthday
+            </span>
+
+            <span class="name">
+                Fasiii
+            </span>
+
+        </h1>
+
+
+        <div class="title-heart">
+            ♡
+        </div>
+
+
+        <div
+            class="letter-button"
+            id="letterButton"
+        >
+            💌
+        </div>
+
+
+        <div class="letter-text">
+            Open the letter
+        </div>
+
+
+        <div class="bottom-heart">
+            ❤️
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         LETTER PAGE
+    ===================================================== -->
+
+    <section
+        class="letter-page"
+        id="letterPage"
+    >
+
+        <div class="letter-label">
+            A little message for you
+        </div>
+
+
+        <h2 class="letter-title">
+
+            Happy
+
+            <span>
+                Birthday
+            </span>
+
+        </h2>
+
+
+        <!-- MESSAGE -->
+
+        <div class="message-card">
+
+            <div class="message-heart">
+                ❤️
+            </div>
+
+
+            <p class="message">
+
+                Happy birthday to you My bestestest friend from all around ,
+
+                <br><br>
+
+                ethre nalllla aaallkar , ethre ethre nallla chekknmar why you here ithin maathram njn enth thetta kazhinja janmathil cheythe😬 .........
+
+                <br><br>
+
+                nte ee 20 yrs lifil nne korchelm priority tharnne oraaal nji maatharan ennne thinnan aahnelm valllpozhum anweshikknndallo athenna velya kaarya ,
+
+                <br><br>
+
+                im very much comfortable around you  ,
+
+                <br><br>
+
+                enthokkke aaavan pattou athokke aaavan njiii okay aahn thats why njn ithre comfortable aaayi poyath at the same time athenneyan ente eettavum velay regret but enthokkke aaahnelm elllavareym happy akkan njii ooro kaaryathil edkknne effort athra maathram ind,
+
+                <br><br>
+
+                koode kond nadakkan korch naanakedan 🥱 , nnalum ennne sahikknnod njnm angott saikka vicharch  ,
+
+                <br>
+
+                <span class="highlight">
+                    good job my bwoyyy
+                </span>
+
+                <br><br>
+
+                inyum koreee karyangal parayn ind but ippo ithre mathi , illengi njii top aavum ath njan sammaykkullla aynmaathronnullla
+                anyway Happpiesttttt birthdayyyyy myyy bwoyyyyyy ❤️❤️❤️ , as per some limitation nki ithre okke cheyyan pattiyittulllu next time i will do my best🤓 
+
+
+                <span class="special">
+
+                    ( I know you’re probably not going to be a permanent person in my life… but honestly, you’re the **best temporary person I’ve ever had** — and somehow, you’ve been temporarily staying for way too long. 😂❤️
+                      Let’s see how long this “temporary contract” lasts. 🤝🤣
+                    )
+
+                </span>
+
+            </p>
+
+        </div>
+
+
+        <div class="love-text">
+
+            With a little love,
+
+            <span>
+                always ❤️
+            </span>
+
+        </div>
+
+
+        <!-- =================================================
+             CERTIFICATE
+        ================================================= -->
+
+        <div class="certificate-section">
+
+            <div class="certificate-label">
+                One Last Official Thing...
+            </div>
+
+
+            <div class="certificate">
+
+                <div class="certificate-border">
+
+                    <div class="certificate-top">
+                        🕷️ ❤️ 🕸️
+                    </div>
+
+
+                    <h3>
+                        CERTIFICATE
+                    </h3>
+
+
+                    <h2>
+                        OF GOOD CHARACTER(.1/5)
+                    </h2>
+
+
+                    <div class="certificate-line"></div>
+
+
+                    <p class="certificate-small">
+                        This is to officially certify that
+                    </p>
+
+
+                    <div class="certificate-name">
+                        FASIII
+                    </div>
+
+
+                    <p class="certificate-text">
+
+                        has successfully demonstrated
+                        exceptional levels of good character,
+                        patience, friendship, and the ability
+                        to tolerate my nonsense.
+
+                    </p>
+
+
+                    <p class="certificate-text">
+
+                        This certificate is proudly awarded
+                        in recognition of his services as a
+                        <strong>
+                            Bestest Friend but below average 
+                        </strong>
+
+                        ❤️
+
+                    </p>
+
+
+                    <div class="certificate-details">
+
+                        <div>
+
+                            <span>
+                                Issued by
+                            </span>
+
+                            <strong>
+                                Adila Nezrin ❤️
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Status
+                            </span>
+
+                            <strong>
+                                Officially Approved ✓
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="certificate-sign">
+
+                       
+                        <div class="sign-line"></div>
+
+                        <small>
+                            Authorized Signature
+                        </small>
+
+                    </div>
+
+
+                    <div class="certificate-warning">
+
+                        ⚠️ ONLY VALID FOR THE NEXT BLOCKING ⚠️
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+           
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ===================================================== -->
+
+    <script>
+
+        /* ================================================
+           OPEN LETTER
+        ================================================= */
+
+        const letterButton =
+            document.getElementById("letterButton");
+
+
+        const hero =
+            document.getElementById("hero");
+
+
+        const letterPage =
+            document.getElementById("letterPage");
+
+
+        letterButton.addEventListener(
+            "click",
+            function () {
+
+                hero.style.display = "none";
+
+                letterPage.classList.add("show");
+
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+
+                createConfetti();
+
+                for (
+                    let i = 0;
+                    i < 18;
+                    i++
+                ) {
+
+                    setTimeout(
+                        createParticle,
+                        i * 150
+                    );
+
+                }
+
+            }
+        );
+
+
+        /* ================================================
+           FLOATING PARTICLES
+        ================================================= */
+
+        function createParticle() {
+
+            const particle =
+                document.createElement("div");
+
+
+            particle.className =
+                "particle";
+
+
+            const items = [
+                "❤️",
+                "♡",
+                "🕷️",
+                "✦",
+                "♥",
+                "🕸️"
+            ];
+
+
+            particle.innerText =
+                items[
+                    Math.floor(
+                        Math.random() *
+                        items.length
+                    )
+                ];
+
+
+            particle.style.left =
+                Math.random() * 100 + "vw";
+
+
+            particle.style.fontSize =
+                (
+                    12 +
+                    Math.random() * 18
+                ) + "px";
+
+
+            particle.style.animationDuration =
+                (
+                    4 +
+                    Math.random() * 4
+                ) + "s";
+
+
+            document.body.appendChild(
+                particle
+            );
+
+
+            setTimeout(
+                function () {
+
+                    particle.remove();
+
+                },
+                8000
+            );
+
+        }
+
+
+        /* ================================================
+           CONFETTI
+        ================================================= */
+
+        function createConfetti() {
+
+            const colors = [
+                "#e5092f",
+                "#145cff",
+                "#ffffff",
+                "#ff4264"
+            ];
+
+
+            for (
+                let i = 0;
+                i < 100;
+                i++
+            ) {
+
+                const piece =
+                    document.createElement("div");
+
+
+                piece.className =
+                    "confetti";
+
+
+                piece.style.left =
+                    Math.random() * 100 + "vw";
+
+
+                piece.style.background =
+                    colors[
+                        Math.floor(
+                            Math.random() *
+                            colors.length
+                        )
+                    ];
+
+
+                piece.style.animationDelay =
+                    Math.random() * 1.5 + "s";
+
+
+                document.body.appendChild(
+                    piece
+                );
+
+
+                setTimeout(
+                    function () {
+
+                        piece.remove();
+
+                    },
+                    6000
+                );
+
+            }
+
+        }
+
+
+        /* ================================================
+           DOWNLOAD / PRINT CERTIFICATE
+        ================================================= */
+
+        const downloadButton =
+            document.getElementById(
+                "downloadCertificate"
+            );
+
+
+        downloadButton.addEventListener(
+            "click",
+            function () {
+
+                window.print();
+
+            }
+        );
+
+    </script>
 
 </body>
+
 </html>
